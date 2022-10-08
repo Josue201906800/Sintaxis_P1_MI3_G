@@ -1,0 +1,969 @@
+**Codigo para la carátula:
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{geometry}
+%\newgeometry{bottom=2cm,top=2cm,left=3cm,right=3cm}%con este comando configuramos los magenes del documento
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[]{Ecuaciones Diferenciales}
+\lhead[]{Matemática Intermedia 3}
+
+\begin{document}
+
+	
+	
+	\begin{center}
+		\vspace*{\baselineskip}
+		
+		{
+			\bf\fontsize{11}{0}{\selectfont{UNIVERSIDAD DE SAN CARLOS DE GUATEMALA} } \\[0.1cm] %CON ESTA ESCALA SE MODIFICA EL ESPACIADO VERTICAL
+			\fontsize{11}{0}{CAMPUS CENTRAL}
+			
+		}
+	
+	\vspace*{0.5\baselineskip}%con este comando se controla el espacio vertical
+	{
+	\bf\fontsize{11}{0}{\selectfont{ESCUELA DE CIENCIAS}}
+}
+
+	\vspace*{0.5\baselineskip}
+{
+	\bf\fontsize{11}{0}{\selectfont{DEPARTAMENTO DE MATEMÁTICA}}
+}
+
+	\vspace*{\baselineskip}
+	
+	\includegraphics[width=0.40\linewidth]{C:/Users/david/OneDrive/Escritorio/1}
+	
+		\vspace*{1\baselineskip}
+		
+			{
+			\bf\fontsize{12}{0}{\selectfont\underline{PROYECTO No. 1}}
+		}
+		
+		\vspace*{1\baselineskip}	
+		
+	{
+		\bf\fontsize{12}{0}{\selectfont\underline{APLICACIONES DE LAS ECUACIONES DIFERENCIALES}}
+	}
+             \vspace*{0.5\baselineskip}
+
+{
+		\bf\fontsize{12}{0}{\selectfont\underline{TRAYECTORIAS  ORTOGONALES}}
+}
+		\vspace*{2\baselineskip}
+		
+		{
+	\fontsize{12}{0}{\selectfont{CURSO : MATEMATICA INTERMEDIA 3}}\\[0.2cm] 
+		}
+	
+		{
+		\fontsize{12}{0}{\selectfont{SECCIÓN : G}}\\[0.2cm] 
+	}
+	
+		{
+		\fontsize{12}{0}{\selectfont{GRUPO : 3 }}\\[0.2cm] 
+	}	
+INTEGRANTES: \\
+
+	{
+		\vspace*{0.5\baselineskip}
+	\fontsize{12}{0}{\selectfont{ 201906800  Josué David Quiej }}\\[0.2cm]
+		\vspace*{0.5\baselineskip}
+	\fontsize{12}{0}{\selectfont{200220123   Willians Alexander Aguilar Rivas }}\\[0.2cm] 
+	\vspace*{0.5\baselineskip}
+	\fontsize{12}{0}{\selectfont{202109710 Luis Antonio Pastor Argueta }}\\[0.2cm] 
+}
+
+\vspace*{0.5\baselineskip}
+		
+			{
+			\fontsize{12}{0}{\selectfont{PROFESOR(A) : Inga. ERICKA YOJANA CANO DIAZ}}\\[0.2cm] 
+		}
+	
+		{
+		\fontsize{12}{0}{\selectfont{AUXILIAR : DIEGO ESPAÑA}}\\[0.2cm] 
+	}
+
+
+\begin{center} 
+		\Large \textsc{SEGUNDO SEMESTRE} \\
+		\Large \textsc{2022 }\\
+	\Large \textsc{Guatemala - Guatemala-} \\
+	
+\end{center}	
+
+\end{center}		
+	
+		
+		
+	\thispagestyle{fancy}	
+
+		
+
+\end{document}
+
+
+**Código para la Introducción:
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage{geometry}
+%\newgeometry{bottom=2cm,top=4cm,left=3cm,right=3cm}   -con este comando configuramos los magenes del documento
+\title{INTRODUCCIÓN}
+\date{}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[]{Ecuaciones diferenciales}
+\lhead[]{Matemática Intermedia 3}
+\usepackage{tikz,pgfplots}
+	
+
+\begin{document}
+
+
+
+\maketitle
+
+
+
+A diferencia de las ecuaciones algebraicas, las ecuaciones diferenciales incluyen derivadas de funciones; su estudio exige una buena comprensión del calculo. Para poder comprender de forma correcta en todo su entorno las ecuaciones diferenciales, es necesario dar un repaso algunos temas importantes tales como los tipos de variables independientes y dependientes, fuciones continuas y discontinuas, derivadas ordinarias y parciales, diferenciales, incrementos e integrales. \\
+
+La descripción de la mayoría de los problemas cientíicos implica relaciones que conectan entre sí los cambios en algunas variables claves; usualmente, cuanto menor es el incremento elegido en las variables cambiantes, más general y exacta será la descripción. En el caso límite de cambios infinitesimales o diferenciales en las variables, obtenemos ecuaciones diferenciales que proporcionan formulaciones matemáticas precisas para los principios físicos y las leyes físicas representando la rapidez de los cambios como derivadas. Por tanto, las ecuaciones diferenciales se usan para investigar una amplia variedad de problemas en ciencias e ingeniería, y el estudio de las ecuaciones diferenciales es, desde hace tiempo, parte integral de la formación de cientíicos e ingenieros.\\
+
+
+Este proyecto corresponde a una investigación y aplicación centrada  en las ecuaciones diferenciales, concretamente en lo que se le conoce con el nombre de trayectorias Ortogonales.
+
+
+	\thispagestyle{fancy}
+	\setcounter{page}{2}% Con este comando puedo colocar el numero de página que yo desee que sea
+	
+	
+	\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[scale=0.8]
+		\begin{axis}[xmin=0,xmax=3,ymin=0,ymax=5,axis x line=center,axis y line=center,xlabel=$x$,ylabel=$y$,xlabel style={at={(ticklabel* cs:1.05)}},ylabel style={at={(ticklabel* cs:1.05)}}]
+			\addplot [red!80!white,thick,samples=200,domain=-2:3]{(x)^(1/2) };
+			\addplot [red!80!white,thick,samples=200,domain=-2:3]{0.5+ (x)^(1/2) };
+			\addplot [red!80!white,thick,samples=200,domain=-2:3]{1+(x)^(1/2) };
+			\addplot [red!80!white,thick,samples=200,domain=-2:3]{1.5+(x)^(1/2) };
+			\node at (axis cs:1,4,){$f(x)$};
+		\end{axis}
+	\end{tikzpicture}
+	
+	\caption{Función $ f(x) = h+ \sqrt{x} $  donde $ h=0 , \frac{1}{2}, 1, \frac{3}{2}$ y $f(x)$ corta de forma perpendicular alguna curva $g(x)$}
+\end{figure}	
+
+\end{document}
+
+
+
+
+**Codigo para el Marco Teórico.
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[]{Ecuaciones Diferenciales}
+\lhead[]{Matemática Intermedia 3}
+
+\begin{document}
+	\title{TRAYECTORIAS  ORTOGONALES}
+	\date{}
+	\maketitle
+	
+	
+	
+	Dada una ecuación diferencial $y^\prime = f(x,y)$ , su solución general depende de una sola constante. El problema inverso a partir de una familia de curvas, de acuerdo con un parámetro, es obtener la ecuación diferencial cuya solución sea la familia de curvas dada.\\
+	
+	Si la familia de curvas $f(x,y,c)=0$, se deriva de manera implícita respecto a la variable x, se obtine la sigiente relación:
+	
+	 \begin{equation*}
+	 	g\left( x,y,\frac{\partial y}{\partial x} ,c \right) =0
+	 \end{equation*}
+ 
+ Entonces, de ambas ecuaciones debemos eliminar el parámetro C.\\
+ 
+ Dada una familia de curvas $f(x,y,c)=0$, se desea encontrar una familia $F(x,y,c)=0$ , que para cada curva de la primera familia que pasa por el punto $(x_0, y_0)$. \\
+ 
+ Esto es, si $\mu(x,y,y^\prime) = 0$ , es una ecuación diferencial de $f(x,y,c)=0$ , entonces $\varPhi\left( x,y,-\frac{1}{y}\right)  = 0$ , lo es de $F(x,y,c)=0$ . A la familia de curvas $F(x,y,c)=0$ , se le llama trayectorias Ortogonales.\\
+ 
+ En nuestro estudio, generalmente sabemos que si dos curvas se cortan formando una ángulo de $90^\circ$ , podemos concluir que dichas curvas se cortan de forma perpendicular  o bien comunmente llamadas curvas ortogonles, una con respecto de la otra.\\
+ 
+Esto significa que  dos curvas son $\bf{ ortogonales}$  , si se intersecan y en los puntos de corte sus rectas tangentes son perpendiculares entre sí.\\
+
+Si todas las curvas de una familia de curvas $F(x,y,c_1) = 0$ son ortogonales a todas las curvas de otra familia $G(x,y,c_2) = 0 $ , entonces se dice que las familias son cada una ,   $\bf{ trayectorias ortogonales}$ de la otra.\\
+
+\thispagestyle{fancy}
+\setcounter{page}{3}
+
+\newpage
+
+Si 
+\begin{equation*}
+\frac{dy}{dx} = f(x,y)
+\end{equation*}  
+
+es la Ecuación Diferencial de la familia $G$ , entonces: 
+\begin{equation*}
+	\frac{dy}{dx} =- \frac{1}{ f(x,y)}
+\end{equation*}
+
+Es la ecuación diferencial para la familia de trayectorias ortogonales de $G$ , esto significa que:
+\begin{equation*}
+	y^\prime = -\frac{1}{y}
+\end{equation*}
+
+Una aplicación elemental de las trayectorias ortogonales es la siguiente. Se tiene un imán y se ha esparcido limaduras de hierrro alrededor de él. Ver figura 1 \\
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.50\linewidth]{C:/Users/david/OneDrive/Escritorio/2} \caption{Lineas Equipotenciales}
+\label{fig:my_label}	
+
+\end{figure}
+
+Las líneas punteadas (las limaduras) corresponden a las lineas de fuerza $\vec{F}$. Las líneas continuas son las trayectorias ortogonales y se llaman líneas Equipotenciales (líneas de igual potencia).\\
+
+
+	\setcounter{page}{4}
+
+\newpage
+\noindent  %con este comando quitamos sangria a lo que deseemos.
+PASOS PARA OBTENER LA  FAMILIA DE TRAYECTORIAS ORTOGONALES A UNA FAMILIA DE CURVAS DADA. \\
+
+\begin{enumerate}
+	\item Derive directamente o de forma implícita la   curva dada.
+	\item Obtenga $y^\prime$
+	\item Iguale $y^\prime = f(x,y)$ , tenga en cuenta que $f(x,y)$ no es la curva dada, sino su derivada, ésta será la nueva $y$ que utilizaremos en el paso 4.
+	\item Como $y^\prime = -\frac{1}{y}$, sustituya $$y^\prime = -\frac{1}{f(x,y)}$$
+	\item Ahora integre el resultado, tanto del lado izquierdo como del derecho, para una mejor visual, antes de integrar , exprese la ecuación diferencial en notación de Leibniz $\frac{dy}{dx}$, pues se recomienda para aplicar un método de resolución a  la ecuación diferencial resultante.
+	\item  Tenga en cuenta que la constante  de integración únicamente se agrega de la integral de lado derecho.
+	\item Deje todo en términos de la variable independiente, $y=G(x)$,$y=G(\theta)$, $y=G(r)$ o bien la variable con la que esté trabajando.
+	\item Si la solución de la ecuación diferencial es muy compleja y no se puede despejar la variable dependiente o bien el despeje genera una solución mixta es decir, términos enteros, fraccionarios, trigonométricos, exponenciales, raíces y demás índole, dejar todo de forma implícita, en éste caso si se desea ver una representación gráfica de la solución, utilice un software de computadora .
+\end{enumerate}
+
+	\setcounter{page}{5}
+
+%\noindent - %con este comando quitamos sangria a lo que deseemos.
+
+
+\end{document}
+
+
+** Codigo para los Ejercicios:
+
+\documentclass[10pt,a4paper,twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[]{Ecuaciones diferenciales}
+\lhead[]{Matemática Intermedia 3}
+\usepackage{xcolor}
+\definecolor{crema}{HTML}{FFE3B3}
+\definecolor{mostaza}{HTML}{FFC172}
+\definecolor{verde}{HTML}{008000}
+\definecolor{azul}{HTML}{0000FF}
+\definecolor{rojo}{HTML}{FF0000}
+\definecolor{Verde Mar}{HTML}{2E8B57}
+
+\begin{document}
+	\begin{center}
+		\textbf{$EJERCICIOS$}
+	\end{center}
+	
+	\begin{enumerate}
+		\item \textbf{Encuente las trayectorias ortogonales de:}
+		
+		\begin{enumerate}
+			\item  
+		
+			\mbox{\boldmath $x^2 +y^2 =Cx$}\\% con este comando ponemos solo el enunicado en negrita
+			
+			Reescribiendo la Ecuación:\\
+			
+			$x+\frac{y^2}{x} = C$ \\
+			
+			$ F(x,y)= x+\frac{y^2}{x} $ \\
+			
+			$ F_x = 1-\frac{y^2}{x^2} =\frac{x^2 -y^2}{x^2}$\\
+			
+			$ F_y = \frac{2y}{x}$\\
+			
+			$y^\prime = -\frac{F_x}{F_y}$\\
+			
+			$y^\prime =-\frac{\frac{x^2 - y^2}{x^2}}{\frac{2y}{x}}$\\
+			
+			$ y^\prime = -\frac{x^2 - y^2}{2xy}  = f(x,y)$ \\
+			
+			Por lo tanto, la ED asociada a  la trayectoria ortogonal es $y^\prime = -\frac{1}{\frac{x^2 - y^2}{2xy}}$\\
+			
+			$ \frac{dy}{dx} =\frac{2xy}{x^2 - y^2}$\\
+			
+			$ 2xy dx - (x^2 - y^2)dy$ \\
+			
+			$M(x,y)= 2xy$
+			
+			$N(x,y)= x^2 - y^2 $\\
+			
+			Como $ M_y= N_x$  \\
+			
+			Y también: $M(tx,ty)= t^ 2xy $, $N(tx,ty)= t^2 (x^2 - y^2)$, donde  $\alpha = 2$ \\
+			Es una ecuación homegonea de grado 2.\\
+			
+			$y=ux   \Rightarrow dy = udx +xdu$ \\
+			
+			$u=\frac{y}{x}$\\
+			
+			$  (x^2 - y^2)dy = 2xy dx$ \\
+			
+			Sustituyendo: \\
+			
+			\setcounter{page}{6}
+			
+			$x^2 (1-u^2)(udx + xdu) = 2x^2 udx$\\
+			
+			$ (1-u^2)(udx + xdu) = 2udx$\\
+			
+			$u(1-u^2)dx+x(1-u^2)du = 2udx$\\
+			
+			$udx-u^3 dx + xdu-xu^2 du = 2udx$\\
+			
+			$2udx-udx+u^3 dx = xdu-xu^2 du$\\
+			
+			$udx +u^3 dx = xdu-xu^2 du$\\
+			
+			$u(1+u^2)dx = x(1-u^2)du$\\
+			
+			$\frac{dx}{x} = \frac{1-u^2}{u(1+u^2) du}$\\
+			
+			$\frac{dx}{x} -\frac{1-u^2}{u(1+u^2) du}= 0$\\
+			
+			Aplicando fracciones parciales para la variable u: \\
+			
+			$\frac{dx}{x}-\frac{1}{u}+\frac{2u}{1+u^2} = 0 $\\
+			
+			Integrando: \\
+			
+			$\int \frac{dx}{x}-\int \frac{1}{u}+\int \frac{2u}{1+u^2} = 0 $\\
+			
+			$In \mid x \mid - In \mid u \mid +In \mid 1+u^2 \mid  = C $\\
+			
+			$In \mid x \mid - In \mid \frac{y}{x} \mid +In \mid 1+\left( \frac{y}{x}\right) ^2 \mid  = C $\\
+			
+			Por propiedades de los logaritmos: \\
+			
+			$\frac{x^2}{y} \frac{x^2 + y^2 }{x^2} = C$\\
+			
+			
+			
+			$$ \mbox{\boldmath $\dfrac{x^2 + y^2}{y} = C$  } $$  \\
+			
+			
+			%\begin{center}
+			%	\framebox[5cm]{{\huge\textcolor{rojo}{ $\frac{x^2 + y^2}{y} = C$}}} \\
+		%	\end{center} Con este comando ponemos una cajita y dentro de ella colocamos la respuesta con un color diferente a la del texto que veniamos escribiento. Quitar los procentajes para ver como queda.
+			
+			
+			\item  
+			
+				 	
+		
+		\mbox{\boldmath $y=x+Ce^{-x}$}\\
+		
+			
+		
+			
+			$y^\prime = 1-Ce^{-x}$\\
+			
+			Sustituyendo: \\
+			
+			$C= \frac{y-x}{e^{-x}}$\\
+			
+			Obtenenmos: \\
+			
+			$y^\prime = 1-\left( \frac{y-x}{e^{-x}}\right)  e^{-x}$ \\
+			
+			$y^\prime =1+ x-y$\\
+			
+			$f(x,y)=1+ x-y $\\
+			
+			Para la familia de curvas ortogonlaes: \\
+			
+			$y^\prime = -\frac{1}{1+x-y}$\\
+			
+			$\frac{dx}{dy} = \frac{1}{y-x-1} $\\
+			
+			$dx -(y-x-1)dy = 0$ \\
+			
+			$dx +(1+x-y)dy = 0$\\
+			
+			$M(x,y) = 1$\\
+			
+			$N(x,y) = 1+x-y$\\
+			
+			$M_y = 0$\\
+			
+			$N_x = 1$\\
+			
+			Como $ M_y \neq N_x  $ la ecuación no es exacta y por lo tanto hay que convertirla a exacta.\\
+			
+			$\frac{N_x - M_y}{N} = \frac{1-0}{1}  = f(y) =  1$\\
+			
+			$\mu_x = e^{\int dy} = e^y$\\
+			
+			$ e^y[dx +(1+x-y)dy] = 0$\\
+			
+			$ e^y dx +( e^y+ e^y x- e^y ydy) = 0$\\
+			
+			$M(x,y) = e^y $\\
+			
+			$N(x,y) =  e^y+ e^y x- e^y ydy $\\
+			
+			$M_y = e^y $\\
+			
+			$N_x =  e^y$\\
+			
+			Como $ M_y = N_x  $  procedemos dela siguiente manera: \\
+			
+			$\frac{\partial f}{\partial y} = e^y+ xe^y - ye^y  $ \\
+			
+			$\int \partial f = \int (e^y+ xe^y - ye^y) \partial y  $ \\
+			
+			$f(x,y) = e^y+ xe^y +e^y- ye^y  +h(x)$ \\
+			
+			$f(x,y) = xe^y +2e^y- ye^y  +h(x)$ \\
+			
+			$\frac{\partial f}{\partial x} =  e^y + h^\prime (x) = e^y $ \\
+			
+			$h^\prime (x)= 0 $ , entonces $h=c$, luego :  \\
+			
+			$ xe^y +2e^y- ye^y+ c_1= c$ \\
+			
+			$ xe^y +2e^y- ye^y = c-c_1$ \\
+			
+			$ xe^y +2e^y- ye^y = c$ \\
+			
+			$$ \mbox{\boldmath $f(x,y)= xe^y +2e^y- ye^y $} $$\\
+			
+			
+			
+		\end{enumerate}
+		
+		\item \textbf{Encuentre las trayectorias ortogonales a las parábolas con vértice sobre el eje “$x$” , eje 	vertical y distancia del vértice al foco igual a 4 unidades.} \\
+		
+		De acuerdo con nuestro conocimiento de las secciónes conicas:\\
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.50\linewidth]{C:/Users/david/OneDrive/Escritorio/3} \caption{Partes de una parábola}
+			\label{fig:my_label}
+			
+			
+			
+		\end{figure}
+		
+		\newpage
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.50\linewidth]{C:/Users/david/OneDrive/Escritorio/4} \caption{Componentes}
+			\label{fig:my_label}	
+			
+		\end{figure}
+		
+		
+		
+	
+		Como la primer familia de curvas ortogonales que nos solicitan es de una parabola con eje vertice sobre el eje x, recordemos que: \\
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.8\linewidth]{C:/Users/david/OneDrive/Escritorio/5} \caption{Parabola sobre el eje x }
+			\label{fig:my_label}
+		\end{figure}
+		
+		Como el vertice está sobre el eje $x$ , las coordenadas del mismo son $(h,0)$ , siendo la ecuación de la parábola $(x-h)^2 = 4p(y-0)$ , si nos damos cuenta las coordenadas del foco son $F(0,p)$ donde según la figura 3 $p$ es la distancia que hay del vertice al foco, en nuestro caso seria $p=4$. La ecuación resusltante para la parábola con vertice sobre cualquier punto del eje $x$ sería :\\
+		
+		$(x-h)^2 = 4*4 (y-0)$\\
+		
+		$(x-h)^2 = 16y$\\
+		
+		$y= \frac{1}{16} (x-h)^2 $\\
+		
+		$y^\prime = \frac{1}{8} (x-h) $\\
+		
+		$f(x,y)= \frac{1}{8} (x-h) $\\
+		
+		Para la familia de curvas ortogonales \\
+		
+		$y^\prime = -\frac{1}{f(x,y)}$\\
+		
+		$\frac{dy}{dx} = -\frac{8}{(x-h)}$\\
+		
+		$dy = \frac{-8}{(x-h)} dx$ \\
+		
+		$\int dy = -8 \int \frac{dx}{(x-h)} $ \\
+		
+		$$ \mbox{\boldmath$y= -8 In \mid x-h \mid + C $}$$ \\
+		
+		Para el caso de la parábola cuyo vertice está sobre el eje $y$ , recordemos que : \\
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.8\linewidth]{C:/Users/david/OneDrive/Escritorio/6} \caption{Parabola sobre el eje $y$ }
+			\label{fig:my_label}
+		\end{figure}
+		
+		
+		Como el vertice está sobre el eje $y$ , las coordenadas del mismo son $(0,k)$ , siendo la ecuación de la parábola $(y-k)^2 = 4p(x-0)$ , si nos damos cuenta las coordenadas del foco son $F(p,0)$ donde según la figura 5 $p$ es la distancia que hay del vertice al foco, en nuestro caso seria $p=4$. La ecuación resusltante para la parábola con vertice sobre cualquier punto del eje $y$ sería :\\
+		
+		$(y-k)^2 = 4*4(x-0)$
+		
+		$(y-k)^2 = 16x$\\
+		
+		$x= \frac{1}{16} (y-k)^2 $\\
+		
+		$x^\prime = \frac{1}{8} (y-k) $\\
+		
+		$f(x,y)= \frac{1}{8} (y-k) $\\
+		
+		Para la familia de curvas ortogonales \\
+		
+		$x^\prime = -\frac{1}{f(x,y)}$\\
+		
+		$\frac{dx}{dy} = -\frac{8}{(y-k)}$\\
+		
+		$dx = \frac{-8}{(y-k)} dy$ \\
+		
+		$\int dx = -8 \int \frac{dx}{(y-k)} $ \\
+		
+		$$ \mbox{\boldmath$x= -8 In \mid y-k \mid + C$} $$ \\
+		
+		
+		\item \textbf{Determine las trayectorias ortogonales de la familia de curvas: } \\
+		\begin{enumerate}
+			\item 
+			\mbox{\boldmath $Cos (y)  = Ce^{-x}$}\\
+			
+		
+			
+			$e^{x} Cos(y) = C$\\
+			
+			$g(x,y)= e^{x} Cos(y)$\\
+			
+			$\frac{\partial g}{ \partial x} = e^{x} Cos(y)$\\ 
+			
+			$\frac{\partial g}{ \partial y} = -e^{x} Sen (y)$\\ 
+			
+			$g\prime = -\frac{\partial g /\partial x }{\partial g /\partial y} = -\frac{e^{x} Cos(y)}{-e^{x} Sen (y)}$\\
+			
+			$g\prime =\frac{Cos (y)}{Sen (y)} = f(x,y)$\\
+			
+			
+			La familia de trayectorias ortogonales está dada por la ecuación : \\
+			
+			$\frac{dy}{dx} = -\frac{1}{f(x,y)}$ $ = -\frac{Sen (y)}{Cos (y)}$\\
+			
+			Se genera una ecuación diferencial de variables separables, se procede a resolver: \\
+			
+			$\frac{dy}{dx} = -\frac{Sen (y)}{Cos (y)}$\\
+			
+			
+			$  \frac{Cos (y)}{Sen (y)} dy = -dx$\\
+			
+			$ \int  \frac{Cos (y)}{Sen (y)} dy = -\int dx$\\
+			
+			$In \mid Sen (y) \mid = -x + c_1 $\\	
+			
+			$Sen (y) = e^{c_1 -x}$\\
+			
+			$$ \mbox{\boldmath$Sen (y)= Ce^{-x}$}$$\\
+			
+			
+			
+			
+			
+			\item 
+			
+				\mbox{\boldmath $y=Ce^{-x}$}\\
+			
+			$h(x,y)= ye^x$\\
+			
+			$\frac{\partial h}{\partial x} = ye^x$  \\
+			
+			$\frac{\partial h}{\partial y} = e^x$\\
+			
+			$h^\prime = -\frac{\partial h / \partial x}{\partial h / \partial y}$ = $-\frac{ye^x}{e^x}$ = $-y$ = $f(x,y)$\\
+			
+			La familia de trayectorias ortogonales está dada por la ecuación : \\
+			
+			$\frac{dy}{dx} = -\frac{1}{f(x,y)}$ $ = -\frac{1}{-y}$= $\frac{1}{y}$\\
+			
+			Se genera una ecuación diferencial de variables separables, se procede a resolver: \\
+			
+			$\frac{dy}{dx} = -\frac{1}{y}$\\
+			
+			$ydy = -dx$\\
+			
+			$\int ydy = -\int dx$\\
+			
+			$$ \mbox{\boldmath$\frac{1}{2} y^2  =  -x + c$}$$\\
+			
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		\end{enumerate}
+		
+			\item \textbf{Encuentre las trayectorias ortogonales para la familia de curvas  \mbox{\boldmath $x^{2}+4y^{2}=C^{2}$}	y dibuje el grafico de las familias. } \\
+			
+			Ecuación Diferencial asociada a la familia:\\
+			$x^{2}+4y^{2}=C^{2}$\\
+			$\sqrt{x^{2}+4y^{2}}=C$\\
+			$F(x,y)=\sqrt{x^{2}+4y^{2}}$\\
+			
+			$F_x = \dfrac{x}{(x^{2}+4y^{2})^{\frac{1}{2}}}$\\
+			
+				$F_y = \dfrac{4y}{(x^{2}+4y^{2})^{\frac{1}{2}}}$\\
+				
+				$y^\prime = -\dfrac{F_X}{F_y}=\dfrac{\dfrac{x}{(x^{2}+4y^{2})^{\frac{1}{2}}}}{\dfrac{4y}{(x^{2}+4y^{2})^{\frac{1}{2}}}} = \dfrac{-x}{4y}$\\
+				
+		Ecuación Diferencial asociada a las trayectorias ortogonales es:\\
+		
+		$\dfrac{dy}{dx} = \dfrac{F_y}{F_x}= \dfrac{4y}{x}$\\
+		
+	Resolviendo la Ecuación Diferencial por variables separables\\
+	
+	$\dfrac{dy}{dx}= \dfrac{4y}{x}$	\\
+	
+	$\dfrac{dy}{4y}= \dfrac{dx}{x}$\\
+	
+		$\int\dfrac{dy}{4y}= \int\dfrac{dx}{x}$\\
+		
+		$\dfrac{1}{4} In \mid y \mid = In \mid x \mid +c$\\
+		
+	Por propiedades de los logarítmos: \\
+	
+		$e^{\frac{1}{4} In\mid y \mid } = e^{ In\mid x \mid  +c}  $\\
+		
+		$y^{\frac{1}{4}} = cx$\\
+		
+		$$\mbox{\boldmath $y=cx^4$}$$ \\
+		
+			\begin{figure}[h]
+			\centering
+			\includegraphics[width=0.9\linewidth]{C:/Users/david/OneDrive/Escritorio/TRAYECTORIA} \caption{Curvas Rojas $y=cx^4$ , es la familia de Trayectorias Ortogonales a $x^{2}+4y^{2}=C^{2}$ representada por las curvas azules.}
+			\label{fig:my_label}
+		\end{figure}
+		
+	
+		
+	
+			\item \textbf{Las curvas equipotenciales de determinado campo electrostático se pueden aproximar por las elipses  \mbox{\boldmath $x^{2}-2Cx+2y^{2}=0$} Encuentre las lines de fuerza. } \\
+			
+			Ecuación Diferencial asociada a la familia:\\
+			
+			$\dfrac{x}{2}+\dfrac{y^2}{x}= C$\\
+			
+			$F(x,y)= \dfrac{x}{2}+\dfrac{y^2}{x}$\\
+			
+			$F_x = \dfrac{1}{2} - \dfrac{y^2}{x} = \dfrac{x^2 -2y^2}{2x^2}$\\
+			
+			$F_y = \dfrac{2y}{x}$\\
+			
+			$y^\prime =- \dfrac{\dfrac{x^2 -2y^2}{2x^2}}{\dfrac{2y}{x}}$ = $-\dfrac{x^2 - 2y^2}{4xy}$\\
+			
+			Ecuación Diferencial asociada a las trayectorias ortogonales es:\\
+			
+			$\dfrac{dy}{dx}= \dfrac{F_y}{F_x}= \dfrac{4xy}{x^2 - 2y^2}$\\
+			
+			Resolviendo la Ecuación Diferencial\\
+			
+			$4xydx = (x^2 -2y^2)dy$\\
+			
+			$M(x,y)= 4xy$   \\
+			
+			$M(xt,yt) = 4xtyt    \Rightarrow  t^2 4xy$\\
+			
+			$N(x,y)= x^2 -2y^2$\\
+			
+			$N(xt,yt)= x^2 t^2 - 2y^2 t^2 \Rightarrow  t^2 (x^2 - 2y^2)$\\
+			
+		Es una ecuación diferencial homogenea de grado 2 . \\
+		
+		$\dfrac{dy}{dx}= \dfrac{4yx}{x^2 -2y^2}$\\
+		
+		Realizando una sustitución : \\
+		
+		$y= xv \Rightarrow dy =  vdx +xdv    \therefore v=\dfrac{y}{x}$ \\
+		
+		Sustituyendo: \\
+		
+		$4xydx= (x^2 -2y^2)$\\
+		
+		$4x(xv)dx = (x^2-2(xv)^2)(vdx+xdv)$\\
+		
+		$4x^2 vdx = (x^2 -2x^2v^2)(vdx+xdv)$\\
+		
+		$4x^2 vdx= x^2(1-2v^2)(vdx+xdv)$\\
+		
+		$4vdx= (1-2v^2)(vdx+xdv)$\\
+		
+		$4vdx= (1-2v^2)vdx+(1-2v^2)xdv$\\
+		
+		$4vdx=vdx-2v^3dx+xdv-2xv^2dv$\\
+		
+		$3vdx+2v^3dx=xdv-2xv^2dv$\\
+		
+		$(3v+2v^3)dx= x(1-2v^2)dv$\\
+		
+		$\dfrac{1}{x} dx = \dfrac{1-2v^2}{3v+2v^3}dv$\\
+		
+		Integrando: \\
+		
+		$\int\dfrac{1}{x} dx = \int\dfrac{1-2v^2}{3v+2v^3}dv$\\
+		
+		$ In\mid x \mid = \dfrac{1}{3} In \mid v \mid -\dfrac{2}{3}In \mid 3+2v^2 \mid + C $ \\
+		
+		
+		$Sustituyendo : $	 \\
+		
+		$v= \dfrac{y}{x}$ \\
+		
+		$In\mid x \mid = \dfrac{1}{3} In \mid \left( \dfrac{y}{x}\right)  \mid - \dfrac{2}{3} In \mid 3+2\left( \dfrac{y}{x}\right) ^2\mid  + C$\\
+		
+		
+			
+	\textbf{Lineas de Fuerza a las curvas equipotenciales están dadas por: }
+		
+		
+		
+		$$ \mbox{\boldmath $In\mid x \mid = \dfrac{1}{3} In \mid \left( \dfrac{y}{x}\right)  \mid - \dfrac{2}{3} In \mid 3+2\left( \dfrac{y}{x}\right) ^2\mid  + C$}$$	
+			
+			
+			
+			
+			\item \textbf{Encuentre las trayectorias Ortogonales a la familia \mbox{\boldmath $y^3=Cx^2$}  } \\
+			
+			Derivando de forma Implícita:\\
+			
+			$3y^2y^\prime=2Cx$\\
+			
+			Como $C=\dfrac{y^3}{x^2}$\\
+			
+			Sustituyendo el la derivada:\\
+			
+			$3y^2y^\prime=2\dfrac{y^3}{x^2}x$\\
+			
+			$3y^2y^\prime=2\dfrac{y^3}{x}$\\
+			
+			$y^\prime= \dfrac{2}{3}\dfrac{y}{x}$ = $f(x,y)$\\
+			
+			como $y^\prime=-\dfrac{1}{f(x,y)}$\\
+			
+			 $y^\prime=-\dfrac{3}{2}\dfrac{x}{y}   \Rightarrow \dfrac{dy}{dx}= -\dfrac{3}{2}\dfrac{x}{y}$\\
+			 
+			 $2ydy=-3xdx$\\
+			 
+			  $2\int y dy=-3 \int xdx$\\
+			  
+			  $y^2=-\dfrac{3}{2}x^2 + C $
+		
+			$y^2 +\dfrac{3}{2}x^2  = C $	\\
+			
+			Familia de elipses con centro en el origen y eje mayor sobre el eje $y$\\
+			
+			
+			
+			$$\mbox{\boldmath $y^2+\dfrac{x^2}{2/3} = C$}$$\\
+			
+			
+			
+			
+				\begin{figure}[h]
+				\centering
+				\includegraphics[width=1.0\linewidth]{C:/Users/david/OneDrive/Escritorio/tt} \caption{Familia de trayectorias Ortogonales}
+				\label{fig:my_label}
+			\end{figure}
+			
+		
+			
+		\item \textbf{Encuentre las trayectorias Ortogonales de la  familia de circunferencias \mbox{\boldmath $x^2+(y-c)^2=C$}  } \\
+			
+			Derivando de manera Implícita :\\
+			
+			$2x+2(y-c)\dfrac{dy}{dx}=0$\\
+			
+			$\dfrac{dy}{dx}=-\dfrac{4xy}{y^2 -x^2}$\\
+			
+			La familia de trayectorias ortogonales está definida por:\\
+			
+			$\dfrac{dy}{dx}=\dfrac{y^2 -x^2}{4xy}$\\
+				
+				
+			La ecuación diferencial es homogenea, si realizamos una sustitución $y=ux$ tendríamos:\\
+			
+			$\dfrac{dy}{dx}=u+x\dfrac{du}{dx}$\\
+			
+			$u+x\dfrac{du}{dx}=\dfrac{u^2 -1}{4u}$\\
+			
+			$x\dfrac{du}{dx}=\dfrac{3u^2 +1}{4u}$\\
+			
+			$\dfrac{3u^2 +1}{4u} du + xdu= 0$\\
+			
+			Integrando tendríamos: \\
+			
+			$\int \dfrac{dx}{x}= \int \dfrac{4u}{3^2 +1} = 0$\\
+			
+			$In\mid x \mid +\dfrac{2}{3}In \mid 3u^2 +1 \mid = In \mid c \mid$\\
+			
+			Aplicando propiedades de los logaritmos tendríamos: \\
+			
+			
+			$\dfrac{(3y^2 + x^2 )^2 }{x} = c$\\
+			
+			
+			
+			
+			La familia de curvas ortogonales a la familia de circunferencias $x^2+(y-c)^2=C$ es : \\
+			
+			
+			 $$\mbox{\boldmath	$\dfrac{(3y^2 + x^2 )^2 }{x} = c$} $$
+		
+	\end{enumerate}
+	
+\end{document}
+
+
+** Código para la bibliografía y cuadro de trabajo de cada integrante:
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead[]{Ecuaciones Diferenciales}
+\lhead[]{Matemática Intermedia 3}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\definecolor{micolor}{RGB}{255, 160, 122}
+\usepackage{colortbl}
+
+\begin{document}
+\title{Bibliografía}
+\date{}
+\maketitle
+\begin{center}
+	
+Denis G. Zill\\
+Ecuaciones Diferenciales con Problemas en la Frontera.\\
+9a Edición. CENGAGE\\
+	
+\end{center}	
+
+\begin{center}
+	
+	Yunus A. Cengel $\mid$ William J. Palm III\\
+	Ecuaciones Diferenciales Para Ingeniería y Ciencias.\\
+    McGRAW-HILL/INTERAMERICANA EDITORES S.A. DE C.V. \\
+	
+\end{center}
+
+
+\begin{center}
+	
+
+	
+	José Ventura Becerril Espinoza.\\
+	David Elizarraraz Martínez.
+	Ecuaciones Diferenciales.\\
+	Técnicas de Solución y Aplicaciones.\\
+	UNIVERSIDAD AUTÓNOMA METROPOLITANA. MÉXICO.\\
+	Primera Edición, 2004.
+\end{center}
+
+
+\begin{center}
+	
+	
+	
+	Elizabeth García $\mid$ David Reich \\
+	Ecuaciones Diferenciales.\\
+	Una nueva Visión\\
+	UNIVERSIDAD AUTÓNOMA METROPOLITANA. MÉXICO.\\
+	Grupo Editorial Patria.\\
+	Primera Edición, 2005.
+\end{center}
+	
+	
+	
+	
+	\thispagestyle{fancy}
+	\setcounter{page}{12}
+	
+	
+	\newpage
+	
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|>{\columncolor{micolor}}m{0.45\linewidth}|m{0.25\linewidth}|m{0.20\linewidth}|}
+			\hline
+			\cellcolor{micolor}\bf Integrante & \ Parte del Proyecto que le correspondía & \ Observaciones\\
+			\hline
+			\bf Josué David Quiej &\begin{itemize}
+				\item Carátula
+				\item Introducción.
+				\item Marco Teórico.
+				\item Ejercicios 1,2 y 3.
+				\item Bibliografía.
+			\end{itemize} & Trabajó\\
+			\hline
+			
+			\bf Luis Antonio Pastor Argueta & \begin{itemize}
+				\item Ejercicios 4 y 5.
+				\item  Gráficas.
+			\end{itemize} & Trabajó\\
+			\hline
+			\bf Willians Alexander Aguilar Rivas & \begin{itemize}
+				\item Ejercicios 6 y 7.
+			\end{itemize} & Trabajó \\
+			\hline
+			 
+			
+		\end{tabular}
+	\end{table}
+
+	
+	
+	
+\end{document}
+
